@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  webserver:
+    build: .
+    ports:
+      - "9100:80"
+    links:
+      - mysql:mysql
+    restart: always
+    volumes:
+      - ./html:/var/www/html/
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - mysql
+
+  mysql:
+    image : gonti0506/mysql2:my
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro

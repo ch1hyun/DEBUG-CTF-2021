@@ -1,0 +1,7 @@
+version: "3"
+services:
+  newbie:
+    build: .
+    image: debugctf/newbie:pwn
+    ports:
+      - 30102:8080

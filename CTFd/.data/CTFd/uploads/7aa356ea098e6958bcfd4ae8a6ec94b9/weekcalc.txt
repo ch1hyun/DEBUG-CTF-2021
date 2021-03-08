@@ -1,0 +1,11 @@
+week calculate
+
+mon ♠ money = 125
+
+tue ♠ tooth = 0
+
+wen ♠ weather = 1
+
+thu ♠ tough = ?
+
+? 를 구해보세요.

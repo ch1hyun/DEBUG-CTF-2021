@@ -1,0 +1,7 @@
+version: "3"
+services:
+  speed_game:
+    build: .
+    image: debugctf/speed_game:misc
+    ports:
+      - 30199:8080

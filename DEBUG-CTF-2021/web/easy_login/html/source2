@@ -1,0 +1,15 @@
+<?php
+  //prevent brute force
+  sleep(3);
+
+  if(empty($_POST['name'])||empty($_POST['pw']))
+  {
+    $a=1;
+  }
+  else{
+    $s=mysqli_connect("mysql","root","example","hi");
+    $sql = "insert into hiru values(NULL,'{$_POST['name']}','{$_POST['pw']}')";
+    $result = mysqli_query($s,$sql);
+    echo "<script>alert('success')</script>";
+  }
+?>

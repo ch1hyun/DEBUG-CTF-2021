@@ -1,0 +1,7 @@
+version: "3"
+services:
+  simple_cmdi:
+    build: .
+    image: debugctf/simple_cmdi:web
+    ports:
+      - 20001:80

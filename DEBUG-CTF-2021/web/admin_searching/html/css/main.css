@@ -1,0 +1,6 @@
+body { background-color:black;color:white;text-align:center; }
+form { width:500px;margin:auto; }
+form>fieldset { padding-bottom:35px; }
+.form-container { text-align:left; }
+.form-container>span { margin:10px; }
+.container { width:800px;height:600px;margin:auto; }

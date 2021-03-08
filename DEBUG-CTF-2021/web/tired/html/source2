@@ -1,0 +1,14 @@
+<?php
+  //secret
+  $FLAG = '*****';
+
+  $result=exec('cat hi;');
+  if($result==='flag')
+  {
+    echo "<h2>".$FLAG."</h2>";
+  }
+  else {
+    echo '<h2>no flag</h2>';
+  }
+
+?>

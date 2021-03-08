@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  webserver:
+    build: .
+    ports:
+      - "9506:5000"
+    restart: always
+    volumes:
+      - ./:/app/
+

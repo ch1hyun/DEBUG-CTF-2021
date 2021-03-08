@@ -1,0 +1,31 @@
+<?php
+  //prevent brute force
+  sleep(3);
+
+  //secret
+  $id='*****';
+  $pw='*****';
+  $FLAG='*****';
+
+  $s=mysqli_connect("mysql","root","example","hi");
+  $sql = "select * from hiru where name='{$_POST['name']}' and password='{$_POST['pw']}'";
+  $result = mysqli_query($s,$sql);
+  $row = mysqli_fetch_array($result);
+
+  //encode to security
+  if(empty($row['name'])||empty($row['password']))
+  {
+    $a=1;
+
+  }
+  else{
+    $result = base_convert($id,36,10)+base_convert($pw,36,10)-23230976;
+    if($result=='admin'&&$row['name']==='debug')//todo : convert name to secret
+    {
+      echo '<script>alert('.$FLAG.')</script>';
+    }
+    else {
+      echo '<script>alert("no flag")</script>';
+    }
+  }
+?>

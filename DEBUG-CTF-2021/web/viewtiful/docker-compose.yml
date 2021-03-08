@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  webserver:
+    build: .
+    ports:
+      - "9204:80"
+    restart: always
+    volumes:
+      - ./html:/var/www/html/
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro

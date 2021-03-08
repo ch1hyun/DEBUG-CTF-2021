@@ -1,0 +1,129 @@
+.DEBUG>h1,.DEBUG>h2,.DEBUG>h3,.DEBUG>h4,.DEBUG>h5,.DEBUG>span,.DEBUG>p,.DEBUG>div { font-family: 'Do Hyeon', sans-serif; }
+.text-center { font-family: 'Do Hyeon', sans-serif; }
+.time-cover { background-color:#777;border-radius:5px;width:100%; }
+.time { background-color:#777;display:grid;grid-template-columns: repeat(4, 1fr);margin:auto;vertical-align:middle;text-align:center;color:white;max-width:500px; }
+.time-title { color:#8B008B; }
+.time>.info { grid-column: span 4; }
+.time>.sub { color:#d2d2d2; }
+
+/* css for animation */
+
+.time-title {
+  -webkit-animation-name: rainbow;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.time-cover {
+  margin:auto;
+  -webkit-animation-name: startOption;
+  -webkit-animation-duration: 1s;
+}
+
+.time {
+  -webkit-animation-name: bright;
+  -webkit-animation-duration: 2.4s;
+}
+
+@-webkit-keyframes rainbow {
+  0% { color: navy; }
+  25% { color: purple; }
+  50% { color: indigo; }
+  75% { color: darkmagenta; }
+  100% { color: navy; }
+}
+
+@-webkit-keyframes startOption {
+  from { width:0%; }
+  to { width:100%; }
+}
+
+@-webkit-keyframes bright {
+  0% { opacity:0;}
+  40% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/* css for mobile */
+
+@media(min-width:100px) {
+  .time {
+    grid-template-rows: 57px 24px 27px 21px;
+    padding:7px 14px;
+  }
+  .days,.hours,.minutes,.seconds {
+    font-size:2.4em;
+  }
+  .time-title {
+    font-size:1.3em;
+  }
+  .base-time {
+    font-size:1em;
+  }
+  .main-text {
+    font-size:1.3em;
+  }
+  #rules-page {
+    position:relative;top:40px;
+  }
+}
+
+@media(min-width:768px) {
+  .time {
+    grid-template-rows: 67px 25px 28px 23px;
+    padding:8px 16px;
+  }
+  .days,.hours,.minutes,.seconds {
+    font-size:2.9em;
+  }
+  .time-title {
+    font-size:1.4em;
+  }
+  .base-time {
+    font-size:1.1em;
+  }
+  .main-text {
+    font-size:1.5em;
+  }
+  #rules-page {
+    position:relative;top:50px;
+  }
+}
+
+@media(min-width:992px) {
+  .time {
+    grid-template-rows: 80px 35px 40px 30px;
+    padding:9px 18px;
+  }
+  .days,.hours,.minutes,.seconds {
+    font-size:3.3em;
+  }
+  .time-title {
+    font-size:1.6em;
+  }
+  .base-time {
+    font-size:1.3em;
+  }
+  #rules-page {
+    position:relative;top:60px;
+  }
+}
+
+@media(min-width:1200px) {
+  .time {
+    grid-template-rows: 90px 40px 45px 35px;
+    padding:10px 20px;
+  }
+  .days,.hours,.minutes,.seconds {
+    font-size:3.7em;
+  }
+  .time-title {
+    font-size:1.6em;
+  }
+  .base-time {
+    font-size:1.3em;
+  }
+  #rules-page {
+    position:relative;top:70px;
+  }
+}
